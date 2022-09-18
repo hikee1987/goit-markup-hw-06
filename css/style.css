@@ -472,6 +472,7 @@ img {
 .project-title {
    font-weight: 700;
    font-size: 36px;
+   line-height: 1.2;
    letter-spacing: 0.03em;
    text-align: center;
    color: var(--item-tx-color);
@@ -1059,6 +1060,14 @@ img {
 .register-form-btn:focus,
 .register-form-btn:hover {
    background-color: #188ce8;
+}
+
+.register-form-desc {
+   font-weight: 400;
+   font-size: 14px;
+   line-height: 1.7;
+   letter-spacing: 0.03em;
+   color: var(--item-prim-color);
 }
 
 .register-form-link {
