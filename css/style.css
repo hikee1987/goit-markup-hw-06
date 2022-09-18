@@ -403,6 +403,12 @@ img {
    margin-left: auto;
    margin-right: auto;
    padding: 10px 32px;
+   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hero-button:focus,
+.hero-button:hover {
+   background-color: #188ce8;
 }
 
 /*
@@ -698,6 +704,12 @@ img {
    color: var(--item-bg-color);
    margin-top: 20px;
    margin-bottom: 9px;
+   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.adress .map:hover,
+.adress .map:focus {
+   color: var(--item-btn-color);
 }
 
 .adress .footer-item {
@@ -716,8 +728,8 @@ img {
    margin-bottom: 9px;
 }
 
-.adress .footer-item:hover,
-.adress .footer-item:focus {
+.adress .footer-link:hover,
+.adress .footer-link:focus {
    color: var(--item-btn-color);
 }
 
@@ -788,7 +800,6 @@ img {
    line-height: 1.1;
    letter-spacing: 0.03em;
    text-transform: uppercase;
-
    color: var(--item-bg-color);
    margin-bottom: 20px;
 }
@@ -801,16 +812,11 @@ img {
 .footer-input {
    width: 358px;
    height: 50px;
-
    padding: 15px;
-
    color: var(--item-bg-color);
    background-color: #2F303A;
-
    border: 1px solid rgba(255, 255, 255, 0.3);
    border-radius: 4px;
-
-   box-sizing: border-box;
    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
 }
 
@@ -822,22 +828,16 @@ img {
    font-size: 16px;
    line-height: 1.87;
    letter-spacing: 0.06em;
-
    align-items: center;
    text-align: center;
-
    padding: 10px 28px;
-
    color: var(--item-bg-color);
    background: var(--item-btn-color);
-
    box-shadow: 0px 4px 4px rgb(0 0 0 / 15%);
    border-color: transparent;
    border-radius: 4px;
    border: none;
-
    cursor: pointer;
-
    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -849,7 +849,6 @@ img {
 .footer-btn:hover,
 .footer-btn:focus {
    background-color: #188ce8;
-
 }
 
 /*
@@ -863,7 +862,6 @@ img {
    top: 0;
    left: 0;
    z-index: 1000;
-
    width: 100%;
    height: 100%;
    background: rgba(0, 0, 0, 0.2);
@@ -882,14 +880,11 @@ img {
    top: 50%;
    left: 50%;
    transform: translate(-50%, -50%);
-
    width: 528px;
    height: 581px;
-
    background-color: var(--item-bg-color);
    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
    border-radius: 4px;
-   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-btn {
@@ -898,23 +893,22 @@ img {
    right: 8px;
    width: 30px;
    height: 30px;
-
    display: flex;
    justify-content: center;
    align-items: center;
    padding: 0;
-
    background-color: var(--item-bg-color);
    border: 1px solid rgba(0, 0, 0, 0.1);
    border-radius: 50%;
-
    cursor: pointer;
-   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
 }
 
-.modal-btn:hover .modal-icon,
-.modal-btn:focus .modal-icon {
+.modal-icon {
+   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1)
+}
+
+.modal-icon:focus,
+.modal-icon:hover {
    fill: var(--item-btn-color);
 }
 
@@ -933,12 +927,9 @@ img {
    font-size: 20px;
    line-height: 1.15;
    letter-spacing: 0.03em;
-
    justify-content: center;
    text-align: center;
-
    margin-bottom: 12px;
-
    color: var(--item-tx-color);
 }
 
@@ -949,7 +940,6 @@ img {
    font-size: 12px;
    line-height: 1.2;
    letter-spacing: 0.01em;
-
    color: var(--item-prim-color);
    margin-left: auto;
    margin-right: auto;
@@ -962,9 +952,7 @@ img {
    font-size: 12px;
    line-height: 1.2;
    letter-spacing: 0.03em;
-
    margin-bottom: 4px;
-
    color: var(--item-prim-color);
 }
 
@@ -973,13 +961,16 @@ img {
    resize: none;
    width: 100%;
    height: 120px;
-
    margin-bottom: 20px;
    padding: 12px 16px;
-
    border: 1px solid rgba(33, 33, 33, 0.2);
    border-radius: 4px;
    outline: transparent;
+   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.register-form-message:focus {
+   border-color: var(--item-btn-color)
 }
 
 .register-form-message::placeholder {
@@ -987,7 +978,6 @@ img {
    font-size: 12px;
    line-height: 1.2;
    letter-spacing: 0.01em;
-
    color: var(--item-prim-color);
 }
 
@@ -1053,28 +1043,28 @@ img {
    font-size: 16px;
    line-height: 1.87;
    letter-spacing: 0.06em;
-
    color: var(--item-bg-color);
    background: var(--item-btn-color);
-
    box-shadow: 0px 4px 4px rgb(0 0 0 / 15%);
    border-color: transparent;
    border-radius: 4px;
-
    cursor: pointer;
-
    margin-left: auto;
    margin-right: auto;
+   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.register-form-btn:focus,
+.register-form-btn:hover {
+   background-color: #188ce8;
 }
 
 .register-form-link {
    font-weight: 400;
    font-size: 14px;
    line-height: 1.7;
-
    letter-spacing: 0.03em;
    text-decoration-line: underline;
-
    color: var(--item-btn-color);
 }
 
